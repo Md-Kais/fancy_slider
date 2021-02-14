@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="del.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
@@ -19,19 +21,21 @@
         <div id="image__overla" class="image__overlay" onmouseover="opacityChange()" onmouseout="opacityChangeOut()">
             <div class="image__title"> Brick</div>
             <div class="image__des">
-                hete
+            <i class="fas fa-download">33455</i>
+            <i class="fas fa-thumbs-up">123</i>
             </div>
     
         </div>
     </div>
 
-//my work
+<!-- my  work -->
     <div class="image">
         <img class="image__img  img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">
         <div id="image__overla" class="image__overlay" onmouseover="opacityChange()" onmouseout="opacityChangeOut()">
-            <div class="image__title"> Brick</div>
+            <div class="image__title"> "${image.tag}"</div>
             <div class="image__des">
-                hete
+                    <i class="fas fa-download">"${image.downloads}"</i>
+                    <i class="fas fa-thumbs-up"> "${image.likes}"</i>
             </div>
     
         </div>

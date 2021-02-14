@@ -26,27 +26,36 @@ const showImages = (images) => {
   images.forEach(image => {
    
     let div = document.createElement('div');
-    console.log(image);
+   // console.log(image);
     //col-lg-3 col-md-4 col-xs-6
-    div.className = 'col-lg-4 col-md-6 col-xs-4 img-item mb-2';
+    div.className = 'col-lg-4 col-md-6 col-xs-4 img-item mb-2 ';
     
-    div.innerHTML = `<img id=${image.id}  onclick=selectItem(event,"${image.webformatURL}") )" class="img-fluid img-thumbnail" src="${image.webformatURL}" 
-    alt="${image.tags}">`;
+    // div.innerHTML = `<img id=${image.id}  onclick=selectItem(event,"${image.webformatURL}") )" class="img-fluid img-thumbnail" src="${image.webformatURL}" 
+    // alt="${image.tags}">`;
+    div.innerHTML=`
+    <div class="image">
+      <img class="image__img  img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">
+        <div id="${image.id}" class="image__overlay"   onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}">
+        <div class="image__title"> ${image.tags}</div>
+        <div class="image__des">
+          <i class="fas fa-download">${image.downloads}</i>
+          <i class="fas fa-thumbs-up"> ${image.likes}</i>
+        </div>
+
+      </div>
+    </div>`;
     // console.log(image.id);
     ///console.log(image.tags);
     gallery.appendChild(div);
-    
+
     
   })
- 
+  
+
 
 }
-function showInfo(x) {
-  // console.log(id, image);
-  console.log(x);
-  // const division = document.getElementById(id);
-  // division.innerHTML=`hello`;
-}
+
+//fail feature onmouse over
 
 
 const getImages = (query) => {

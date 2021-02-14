@@ -71,3 +71,24 @@ img {
     width: 90%;
   }
 }
+/* new hover */
+.image__img{
+    display: block;
+    width: auto;
+}
+.image__overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 97%;
+    height: 99%;
+    background: rgba(0, 0, 0, 0.05);
+    color:#302761;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    opacity: 1;
+    
+}
