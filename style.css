@@ -76,14 +76,35 @@ img {
     display: block;
     width: auto;
 }
+.image__overpage{
+    position: absolute;
+    top: 5px;
+    /* left: 20px; */
+    /* right: 20px; */
+    width: 90%;
+    height: 8%;
+    background: rgba(0, 0, 0, 0.05);
+    color:#630563;
+    font-family: 'Quicksand', sans-serif;
+   display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+
+}
+/* .hoverable:hover{
+  display: block;
+} */
 .image__overlay{
     position: absolute;
     top:0;
     left: 0;
-    width: 97%;
-    height: 99%;
+    width: 96%;
+    height: 98%;
     background: rgba(0, 0, 0, 0.05);
     color:#630563;
+    /* margin: 5px; */
+    text-align: center;
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: row;
@@ -91,3 +112,13 @@ img {
     justify-content: space-between;
     opacity: 1;
 }
+.btnPage{
+  background-color: transparent;
+  /* border: transparent; */
+}
+/* .image__overlay img{
+  align-items: center;
+   height: 400px;
+ 
+  object-fit: cover;
+} */
