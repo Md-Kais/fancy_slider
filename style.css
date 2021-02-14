@@ -83,12 +83,11 @@ img {
     width: 97%;
     height: 99%;
     background: rgba(0, 0, 0, 0.05);
-    color:#302761;
+    color:#630563;
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
     opacity: 1;
-    
 }
