@@ -30,6 +30,7 @@ const showImages = (images) => {
     //col-lg-3 col-md-4 col-xs-6
     div.className = 'col-lg-4 col-md-6 col-xs-4 img-item mb-4 ';
 
+    //change it and make the image little more informative {extra Information}
     div.innerHTML = `<img id=${image.id}  onclick=selectItem(event,"${image.webformatURL}") )" class="img-fluid img-thumbnail" src="${image.webformatURL}" 
     alt="${image.tags}">`;
     div.innerHTML = `
@@ -52,14 +53,7 @@ const showImages = (images) => {
        </div>
     </div>
   `;
-  // div.innerHTML+=`
-  //   <div  class="d-flex  justify-content-between">
-  //     <div style="margin:2px"></div>
-  //       <a class="btn btn-info btn-sm " href="#" role="button"> Go To Page</a>
-  //       <a class="btn btn-info btn-sm " href="#" role="button">Extra Info </a>
-  //     </div`;
-    // console.log(image.id);
-    ///console.log(image.tags);
+   
     gallery.appendChild(div);
 
 
@@ -83,10 +77,10 @@ const getImages = (query) => {
 
 }
 document.getElementById("search").addEventListener("keypress", function (event) {
-    if (event.key === 'Enter') {
-      document.getElementById("search-btn").click();
-    }
-  });
+  if (event.key === 'Enter') {
+    document.getElementById("search-btn").click();
+  }
+});
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
@@ -110,7 +104,7 @@ const createSlider = () => {
     alert('Select at least 2 image.')
     return;
   }
-  // create slider previous next area
+  // create slider previous next area(Back Button)
 
   sliderContainer.innerHTML = ` <a class="btn btn-warning btn-sm" style="margin: 5px" href="#" role="button" onclick="back()"> 👈Back👈  </a>
 `;
@@ -235,7 +229,7 @@ sliderBtn.addEventListener('click', function () {
 const toggleSpinner = () => {
   const spinner = document.getElementById('loading');
   spinner.classList.toggle('d-none');
-  // alert('fsdf')
+ 
 }
 
 //create back function:
